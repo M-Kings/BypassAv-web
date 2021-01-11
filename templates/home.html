@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>上传下载</title>
+</head>
+<body>
+    <form action="{% url 'upload'%}" enctype="multipart/form-data" method="post">
+        <select name="sel_value">
+            {# 这里我们遍历form表单中的SELVALUE这个字典,然后把key,value成对取出  #}
+            {% for key,value in select_form.SELVALUE %}
+                <option value="{{ value }}">{{ key }}</option>
+            {% endfor %}
+        </select>
+        {% csrf_token %}
+        <input type="file" name="filename" value="">
+        <input type="submit" value="上传">
+    </form>
+
+</body>
