@@ -7,6 +7,9 @@
 cs attacks - packages - payload generator 
 output 选择Raw（勾选x64时web页面上需要选择AMD64）
 
+## 本地使用
+需要按照nim
+
 ## 项目结构
 code nim源代码
 其余为web代码
