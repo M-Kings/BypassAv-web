@@ -8,7 +8,8 @@ SAVED_FILES_DIR = r'files/'
 
 def render_home_template(request):
     files = os.listdir(SAVED_FILES_DIR)
-    return render(request, 'home.html')
+    #return render(request, 'home.html')
+    return render(request, 'index.html')
 
 def filesha256():
     complex_str = "fs75@5fd%5386v^&#scs494**-cs/56/_ss$$DSD125c!#|FR54545dsdsc"
@@ -39,7 +40,8 @@ def home(request):
     #if not os.path.exists(SAVED_FILES_DIR):
     #    os.makedirs(SAVED_FILES_DIR)
     select_form = SelectTestForm()
-    return render(request,"home.html",{'select_form': select_form,})
+    #return render(request,"home.html",{'select_form': select_form,})
+    return render(request,"index.html",{'select_form': select_form,})
 
 
 @require_GET

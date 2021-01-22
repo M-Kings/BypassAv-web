@@ -1,0 +1,48 @@
+﻿{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>文件上传</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>	
+</head>
+
+<body>
+<div class="agile-its">
+	<h2>上传</h2>
+	<div class="w3layouts">
+		<div class="photos-upload-view">
+			<form id="upload" action="{% url 'upload'%}" method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				<input type="hidden" id="MAX_FILE_SIZE" name="filename" value="300000" />
+					<div class="agileinfo">
+					<input type="submit" class="choose" value="Choose file..">
+					<h3>OR</h3>
+						<input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+						<div id="filedrag">drag and drop files here</div>
+					
+					<select name="sel_value" value="请选择..." style="width: 100%;margin-bottom: 20px;text-align:center;">
+					  <option value="amd64">amd64</option>
+					  <option value="i386">i386</option>
+					</select>
+					</div>
+					<input type="submit" value="上传">
+			</form>
+			<div id="messages">
+                                <p>Status Messages</p>
+                        </div>
+		</div>
+		<div class="clearfix"></div>
+		<script src="{% static 'js/filedrag.js' %}"></script>
+
+		</div>
+</div>
+
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+
+</div>
+</body>
+</html>
