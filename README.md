@@ -16,3 +16,12 @@ code nim源代码
 
 ## 在线地址
 http://192.168.161.10:8000/
+
+## 页面
+![Image text](../img/chrome_lLNthrMxPe.png)
+
+## vt查杀
+### i386
+![Image text](../img/chrome_94gpCJikxz.png)
+### AMD64
+![Image text](../img/chrome_ktbU5ilJe7.png)
