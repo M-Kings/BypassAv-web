@@ -11,6 +11,7 @@ output 选择Raw（勾选x64时web页面上需要选择AMD64）
 - [ ] windows 2008(不包含r2 sp2 等)无法运行，推测缺少vc++ 运行库
 ## 本地使用
 不支持windows、mac下部署服务端
+
 安装nim
 安装nim winim模块
 
